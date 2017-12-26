@@ -53,7 +53,7 @@ public class Algorithm {
 			List<Mod> interResult = new ArrayList<Mod>();
 			for (int i = 0; i < allTerms.size(); i++) {
 				for (int j = i+1; j < allTerms.size(); j++) {
-					Mod combined = combineIndex(allTerms.get(i), allTerms.get(j));
+					Mod combined = combine(allTerms.get(i), allTerms.get(j));
 					if(null != combined)	interResult.add(combined);
 				}
 				if (allTerms.get(i).notCombined) result.add(allTerms.get(i));
@@ -66,7 +66,7 @@ public class Algorithm {
 		return result;
 	}
 
-	private static Mod combineIndex(Mod mod1, Mod mod2) {
+	private static Mod combine(Mod mod1, Mod mod2) {
 		int r = -1;
 		for (int i = 0; i < mod2.bitString.length(); i++) {
 			if (mod1.bitString.charAt(i) != mod2.bitString.charAt(i)) {
