@@ -17,7 +17,7 @@ import java.util.Scanner;
 public class Main {
 
 	private static final String REL_PATH = "./input/";
-	private static final String FILE_NAME_WITH_EXTENTION = "input7.txt";
+	private static final String FILE_NAME_WITH_EXTENTION = "input.txt";
 	private static final String INPUT_PATH = REL_PATH + FILE_NAME_WITH_EXTENTION;
 
 	public static void main(String[] args) throws FileNotFoundException {
