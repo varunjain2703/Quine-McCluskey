@@ -11,7 +11,8 @@ public class Main {
 
 	public static void main(String[] args) {
 		new GUI_Input(); 
-		Console_Input.fromConsole();
+		/* For input form file use below method and provide path in args*/
+		//Console_Input.fromConsole(args[0]);
 	}
 
 }

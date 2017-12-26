@@ -10,10 +10,11 @@ public class Console_Input {
 	
 	private static final String REL_PATH = "./input/";
 	private static final String FILE_NAME_WITH_EXTENTION = "input.txt";
-	private static final String INPUT_PATH = REL_PATH + FILE_NAME_WITH_EXTENTION;
+	private static String INPUT_PATH = REL_PATH + FILE_NAME_WITH_EXTENTION;
 	
 	
-	public static void fromConsole() {
+	public static void fromConsole(String path) {
+		if(!path.isEmpty())	INPUT_PATH = path;
 		int variables;
 		Map<Long, List<Mod>> minTerms = new HashMap<Long, List<Mod>>();
 		List<Mod> dontCare = new ArrayList<>();
@@ -52,6 +53,8 @@ public class Console_Input {
 			if (result.indexOf(mod) != result.size() - 1)
 				System.out.print(" + ");
 		}
+		System.out.println("\nFor exit enter e");
+		new Scanner(System.in).next();
 	}
 
 	private static int input(Map<Long, List<Mod>> minTerms, List<Mod> dontCare, List<Mod> allTerms)

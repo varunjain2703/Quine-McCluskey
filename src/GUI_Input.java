@@ -16,7 +16,6 @@ import javax.swing.JTextField;
 public class GUI_Input implements ActionListener{
 
 	private static Map<Long, List<Mod>> minTerms = new HashMap<Long, List<Mod>>();
-	private static List<Mod> dontCare = new ArrayList<>();
 	private static List<Mod> allTerms = new ArrayList<>();
 	
 	JTextField variableT, minTermsT, dontCareT;
@@ -75,6 +74,8 @@ public class GUI_Input implements ActionListener{
     }
 	
 	private static void input(int variables, String nMinTerms, String nDontCare) throws WrongInputException {
+		minTerms = new HashMap<Long, List<Mod>>();
+		allTerms = new ArrayList<>();
 		long max = (long)Math.pow(2, variables) - 1;
 		for (String t : nMinTerms.split(",")) {
 			try {
