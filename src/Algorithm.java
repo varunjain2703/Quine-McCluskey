@@ -15,7 +15,7 @@ public class Algorithm {
 
 	static List<Mod> algo(Map<Long, List<Mod>> minTerms, List<Mod> allTerms) {
 		Set<Mod> step1Result = new HashSet<Mod>(algoStep1(allTerms));
-		/*step1Result.forEach(System.out::println);//DD
+		/*step1Result.forEach(System.out::println);
 		System.out.println();*/
 		
 		List<Mod> result = algoStep2(minTerms, step1Result);
